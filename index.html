@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>空間芳香事業資料</title>
+<link rel="icon" href="./favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,.28), transparent 34%),
+        linear-gradient(135deg, #d8d2c7 0%, #c9c1b4 100%);
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .18;
+      background-image:
+        repeating-radial-gradient(circle at 0 0, rgba(255,255,255,.35) 0 1px, transparent 1px 4px);
+      mix-blend-mode: overlay;
+      z-index: 0;
+    }
+
+    .promo-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .promo-card {
+  width: min(100%, 560px);
+  padding: 56px 40px;
+  border-radius: 24px;
+
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255,255,255,.12), transparent 40%),
+    radial-gradient(circle at 80% 100%, rgba(255,255,255,.06), transparent 50%),
+    linear-gradient(160deg, #0f1c2e 0%, #13233a 50%, #0c1626 100%);
+
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(0,0,0,.25);
+}
+
+    .logo {
+      width: 120px;
+      height: auto;
+      margin: 0 auto 28px;
+      display: block;
+    }
+
+    .label {
+      margin: 0 0 20px;
+      font-size: 12px;
+      letter-spacing: .18em;
+      color: rgba(255,255,255,.62);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 8vw, 72px);
+      line-height: .95;
+      letter-spacing: -0.04em;
+      color: #fff;
+    }
+
+    .text {
+      margin: 28px 0 36px;
+      color: rgba(255,255,255,.82);
+      line-height: 1.8;
+    }
+
+    .promo-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      min-width: 220px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .08em;
+      transition: .25s ease;
+    }
+
+    .promo-btn::after {
+      content: "→";
+      font-size: 22px;
+      line-height: 1;
+      transition: .25s ease;
+    }
+
+    .promo-btn:hover {
+      background: #fff;
+      color: #0f1c2e;
+      transform: translateY(-2px);
+    }
+
+    .promo-btn:hover::after {
+      transform: translateX(4px);
+    }
+
+    @media screen and (max-width: 767px) {
+      .promo-page {
+        padding: 20px;
+      }
+
+      .promo-card {
+        padding: 44px 24px;
+        border-radius: 20px;
+      }
+
+      .logo {
+        width: 96px;
+        margin-bottom: 24px;
+      }
+
+      .label {
+        font-size: 10px;
+        letter-spacing: .16em;
+      }
+
+      h1 {
+        font-size: clamp(42px, 14vw, 58px);
+      }
+
+      .text {
+        margin: 24px 0 32px;
+        font-size: 14px;
+      }
+
+      .promo-btn {
+        width: 100%;
+        max-width: 240px;
+        margin: auto;
+      }
+    }
+    @media screen and (max-width: 767px) {
+  .promo-page {
+    padding: 20px;
+  }
+
+  .promo-card {
+    width: 90%;
+    max-width: 92%; /* ←これが効く */
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<div class="promo-page">
+  <div class="promo-card">
+
+    <img src="./logo.png" alt="Lohb" class="logo">
+
+    <p class="label">Lohb 空間芳香事業 Promotional Material</p>
+
+    <p class="text">
+      空間芳香事業に関する資料はこちらからご確認ください。
+    </p>
+
+    <a href="./Lohb＿空間芳香事業.pdf" target="_blank" class="promo-btn">
+      View PDF
+    </a>
+
+  </div>
+</div>
+
+</body>
+</html>
